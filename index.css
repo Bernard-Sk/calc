@@ -37,6 +37,9 @@ body {
    background: #0e6ea6;
    padding: 20px;
    border-radius: 10px;
+   /* width: 19vmax; */
+   /* height: 26vmax; */
+
 
 }
 
@@ -44,8 +47,8 @@ body {
    border: 0;
    outline: 0;
    margin: 5px;
-   width: 60px;
-   height: 60px;
+   width: 3vmax;
+   height: 3vmax;
    background: transparent;
    border-radius: 10px;
    color: #fff;
@@ -53,18 +56,27 @@ body {
    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.2);
    font-size: 20px;
 }
+form {
+   margin: 0;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+}
 
 form .display {
    display: flex;
    justify-content: flex-end;
    margin: 10px 0;
+   
 }
 
 form .display input {
    text-align: right;
    box-shadow: none;
    flex: 1;
-   font-size: 45px;
+   font-size: 2.8vmax;
+   height: 6vmax;
+   width: 20vmax;
 }
 
 form input.operator {
