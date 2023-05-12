@@ -1,0 +1,557 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+body {
+   min-height: 300vh;
+}
+
+.footer {
+   background-color: rgb(20, 15, 0);
+   height: 10vh;
+   color: white;
+}
+
+::-webkit-scrollbar {
+   width: .4em;
+}
+
+::-webkit-scrollbar-thumb {
+   background-color: #493502;
+   border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+   background-color: white;
+}
+
+header {
+   position: fixed;
+   display: flex;
+   width: 100%;
+   height: 102px;
+   top: 0;
+   /* left: 0; */
+   margin: 0;
+   padding: 20px 20px;
+   box-shadow: 0 2px 3px rgba(13, 15, 3, 0.4);
+   justify-content: space-between;
+   z-index: 5;
+   /* display: none; */
+   background: linear-gradient(rgb(176, 151, 110),
+         rgb(171, 120, 37),
+         rgb(171, 120, 37, .92));
+}
+
+.logo {
+   position: relative;
+   display: flex;
+   user-select: none;
+   scale: 0.6;
+   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+   z-index: -2;
+}
+
+.logoimg {
+   border-radius: 30px;
+   position: absolute;
+   right: 0;
+   left: 0;
+   top: -2em;
+   object-fit: center;
+   image-rendering: auto;
+
+}
+
+
+
+/* .nav-bar .net a {
+   text-decoration: none;
+   font-size: 1.3em;
+   color: rgb(255, 255, 255);
+   padding: 7px;
+   font-family: Georgia, "Times New Roman", Times, serif;
+   transition: 0.4s;
+   background: rgba(60, 37, 4, 0.3);
+   border-radius: 4px;
+   
+}
+
+.nav-bar .net .info a.active,
+.nav-bar .net a:hover {
+   background: none;
+   box-shadow: 0 1px 24px rgba(13, 15, 3, 0.4);
+}
+
+.nav-bar .net .info {
+   top: 0;
+   margin-right: 80px;
+   padding: 0px;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.nav-bar .net .info a {
+   margin: 20px;
+}
+
+.nav-bar .net .service {
+   top: 0;
+   margin: 0;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.nav-bar .net .service a {
+   margin: 20px;
+} */
+
+
+
+.menu {
+   font-size: 2em;
+   top: 0;
+   bottom: 0;
+   margin: 5px;
+   color: white;
+}
+
+.menu:hover {
+   scale: 1.05;
+   color: rgb(234, 234, 234);
+}
+
+.net {
+   background-color: rgba(2, 2, 2, 0.8);
+   width: 25vh;
+   height: 38vh;
+   position: absolute;
+   right: 3px;
+   /* display: flex; */
+   flex-direction: column;
+   border-radius: 10px;
+   /* scale: 0; */
+   transition-duration: 1s;
+   display: none;
+
+}
+
+.net.active {
+   display: block;
+}
+
+.net a {
+   color: white;
+   text-decoration: none;
+   font-size: 1.3rem;
+}
+
+.info {
+   display: flex;
+   flex-direction: column;
+   margin: 2em;
+}
+
+.service {
+   display: flex;
+   flex-direction: column;
+   margin: 2em;
+}
+
+/* the header css stoped here */
+
+/* this is where the landig page css started from */
+
+.home-photo {
+   position: fixed;
+   overflow: hidden;
+   width: 100%;
+   height: 85vh;
+   margin: auto;
+   /* object-fit: cover; */
+   justify-content: center;
+   align-items: center;
+   z-index: -9;
+   /* display: none; */
+}
+
+.transparent {
+   background: transparent;
+   justify-content: center;
+   align-items: center;
+   display: flex;
+   width: 100%;
+   height: 85vh;
+}
+
+
+.landing button {
+   width: 7em;
+   height: 2em;
+   color: white;
+   background-color: rgb(179, 3, 3);
+   border-radius: 20px;
+   font-size: .6em;
+   margin: 10px;
+   border: solid 0;
+}
+
+.landing button:hover {
+   scale: 1.02;
+   background-color:  rgb(154, 77, 77);
+}
+
+.landing {
+   
+   font-size: 2.5vmax;
+   margin: 0 3em 0 4em;
+   top: 20rem;
+   bottom: 20rem;
+   color: rgb(214, 226, 235);
+   padding: 0;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+}
+
+.transparent .landing .text {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.image-overflow {
+   position: absolute;
+   /* display: flex; */
+   height: 100%;
+   width: 100%;
+   animation: slideshow 35s infinite;
+   -moz-animation: slideshow 35s infinite;
+   -webkit-animation: slideshow 35s infinite;
+   background-repeat: no-repeat;
+   background-size: 100% 80vh;
+   -webkit-background-size: 100% 85vh;
+   -moz-background-size: 100% 85vh;
+   /* background-image: ; */
+
+}
+
+@keyframes slideshow {
+   0% {
+      background-image: linear-gradient(rgba(19, 15, 6, 0.4), rgba(20, 18, 14, 0.4)), url("haven-on-earth.jpg");
+   }
+
+   20% {
+      background-image: linear-gradient(rgba(19, 15, 6, 0.4), rgba(17, 15, 12, 0.4)), url("haven-on-earth1.jpg");
+   }
+
+   50% {
+      background-image: linear-gradient(rgba(19, 15, 6, 0.4), rgba(17, 15, 11, 0.4)), url("haven-on-earth2.jpg");
+   }
+
+   70% {
+      background-image: linear-gradient(rgba(19, 15, 6, 0.2), rgba(17, 15, 11, 0.3)), url("haven5.jpg");
+   }
+
+   100% {
+      background-image: linear-gradient(rgba(19, 15, 6, 0.6), rgba(22, 16, 5, 0.6)), url("haven-on-earth3.jpg");
+   }
+
+}
+
+/* .blur-backround {
+   position: fixed;
+   background-position: fixed;
+   z-index: -1; */
+/* } */
+
+.navbut {
+   position: absolute;
+   top: 50%;
+   z-index: 2;
+   transform: translateY(-10%);
+}
+
+.navbut span button {
+   width: 50px;
+   height: 60px;
+   font-size: 40px;
+   outline: none;
+   border-radius: 7px;
+   background-color: rgb(27, 20, 3);
+   color: rgb(236, 146, 12);
+   opacity: .7;
+   cursor: pointer;
+}
+
+.navbut span button:hover {
+   background-color: rgba(63, 46, 7, 0.8);
+}
+
+.up {
+   display: flex;
+   transform: translateY(-200px);
+}
+
+.down {
+   display: flex;
+
+}
+
+/* this where the landing page css stoped  */
+
+/* this is where the excellent service css started */
+
+.home-page {
+   background-color: transparent;
+   z-index: 5;
+}
+
+.content {
+   background-color: white;
+}
+
+.more {
+   z-index: 2;
+   background-image: linear-gradient(rgba(255, 255, 255, 0.91), rgb(255, 255, 255, 0.91)), url("page.png");
+   margin: auto;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+}
+
+
+.more .name {
+
+   margin: auto;
+   text-align: center;
+}
+
+.name h2 {
+   /* background-color: #cb9595; */
+   font-size: 3.5vmax;
+   font-family: 'Javanese Text', Times, Arial, Helvetica, Gill Sans, Calibri, Trebuchet MS, sans-serif;
+   color: #8d600b;
+   height: 100%;
+   width: 100%;
+   text-shadow: -5px 10px 3px rgba(110, 109, 109, 0.5);
+   position: relative;
+
+
+}
+
+.name h3 {
+   font-size: 3em;
+
+}
+
+.name .king {
+   margin: auto;
+   /* overflow: hidden; */
+   width: 100%;
+   height: 100%;
+   color: rgb(12, 7, 0, 0.75);
+   position: absolute;
+}
+
+.name .king span {
+   font-weight: 900;
+   color: #0d0a00;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   /* font-size: 2.2em; */
+   margin: 20px;
+}
+
+.king h3 {
+   font-size: 2.2vmax;
+}
+
+.name .king .design {
+   color: rgb(231, 113, 10);
+   transition: 1s;
+}
+
+.blog-container strong {
+   /* display: flex; */
+   /* margin: auto; */
+   /* justify-content: center; */
+   padding: 0;
+   align-items: center;
+   text-align: center;
+   color: rgb(186, 99, 17);
+   font-size: 2.1vmax;
+   position: absolute;
+   margin: -2em;
+   font-family: 'Times New Roman', Times, serif;
+}
+
+.blog-container {
+   width: 100%;
+   display: flex;
+   padding: 10vmax 0em 0em 0em;
+   flex-wrap: wrap;
+   margin: 10vw 0;
+   text-align: center;
+   justify-content: center;
+   z-index: 0;
+
+}
+
+
+
+.first-blog {
+   padding: 0;
+   margin: 0 1rem 0 0;
+   border-radius: 10px;
+   overflow: hidden;
+   width: 27em;
+   scale: .9;
+   background-color: rgb(255, 255, 255, 0.9);
+   z-index: 0;
+
+}
+
+.first-blog:hover {
+   scale: .905;
+
+}
+
+
+.first-blog h3 {
+   margin: auto;
+   justify-content: center;
+   align-items: center;
+   margin: 1em;
+   height: 2.4vh;
+}
+
+/* .first-blog {
+   margin: 20px;
+} */
+
+.blog-body {
+   width: 100%;
+   height: auto;
+}
+
+.blog-image {
+   width: 100%;
+   height: auto;
+}
+
+.blog-image img {
+   width: 100%;
+   height: 20em;
+   object-fit: cover;
+   object-position: center;
+}
+
+/* .blog-image img:hover{
+   mask-image: url(architecture2.jpg);
+} */
+
+.blog-text {
+   padding: 2.4em;
+   display: flex;
+   flex-direction: column;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 3;
+   font-family: Arial, Helvetica, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   /* -webkit-box-orient: vertical;  */
+}
+
+.blog-text a{
+   text-decoration: none;
+   color: rgb(81, 3, 226);
+   font-weight: 500;
+   font-size: 1.2em;
+}
+
+@media(max-width:1250px) {
+   .first-blog {
+      width: 25em;
+   }
+}
+
+/* the is where the excellent service css ended */
+
+/* this is where the second part of the body started */
+
+.section2 {
+   padding-top: -60px;
+   display: flex;
+   flex-direction: column;
+   /* background-color: #000000; */
+}
+
+
+.group1 {
+   display: flex;
+   top: 0;
+}
+
+.group1 img {
+   border: solid 2px white;
+   height: 25vw;
+   width: 33.33%;
+
+}
+
+.group2 {
+   display: flex;
+   top: 0;
+}
+
+.group2 img {
+   border: solid 2px white;
+   height: 25vw;
+   width: 33.33%;
+}
+
+.group3 {
+   display: flex;
+   top: 0;
+}
+
+.group3 img {
+   border: solid 2px white;
+   height: 28vw;
+   width: 50%;
+}
+
+.group4 {
+   display: flex;
+   top: 0;
+}
+
+.group4 img {
+   border: solid 2px white;
+   height: 28vw;
+   width: 33.33%;
+}
+
+.section2  a {
+   text-decoration: none;
+   color: rgb(27, 12, 234);
+   align-items: center;
+   text-align: center;
+   font-weight: 100;
+}
+
+/* second part of the body'S  css ended here */
+
+/* Third part of the body's css starts here */
+
+.section3 {
+   height: 100vh;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   background-image: linear-gradient(rgba(19, 15, 6, 0.5), rgba(22, 16, 5, 0.5)), url("floor-plan4.jpg");
+   object-position: center;
+   object-fit: cover;
+}
